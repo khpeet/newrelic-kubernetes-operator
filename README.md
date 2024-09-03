@@ -33,7 +33,7 @@ Currently the operator supports managing the following resources:
 - Alert Conditions for APM, Browser and mobile
 - Alert Channels
 
-If you are looking for New Relic's Kubernetes operator for managing New Relic's Kubernetes integration, please see [newrelic-k8s-operator](https://github.com/newrelic/newrelic-k8s-operator). 
+If you are looking for New Relic's Kubernetes operator for managing New Relic's Kubernetes integration, please see [newrelic-k8s-operator](https://github.com/newrelic/newrelic-k8s-operator).
 
 # Quick Start
 > <small>**Note:** These quick start instructions do **not** require you to clone the repo.</small>
@@ -57,7 +57,7 @@ If you are looking for New Relic's Kubernetes operator for managing New Relic's 
 1. Install cert-manager
 
    ```bash
-   kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.15.0/cert-manager.yaml
+   kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v1.15.3/cert-manager.yaml
    ```
 
    > <small>**Note:** This takes a minute or two to finish so wait a minute before going on to the next step.</small>
@@ -133,9 +133,9 @@ The operator will create and update alert policies and NRQL alert conditions as 
 
 ### Monitoring the New Relic Operator
 
-The New Relic Operator uses the New Relic Go Agent to report monitoring statistics. 
-This can be activated by adding a Kubernetes Secret and an option ConfigMap to configure the agent. 
-We'll be using [Example_New_Relic_Agent_Config](examples/example_new_relic_agent_config.yaml) 
+The New Relic Operator uses the New Relic Go Agent to report monitoring statistics.
+This can be activated by adding a Kubernetes Secret and an option ConfigMap to configure the agent.
+We'll be using [Example_New_Relic_Agent_Config](examples/example_new_relic_agent_config.yaml)
 
 ```yaml
 apiVersion: v1
@@ -146,7 +146,7 @@ metadata:
 type: Opaque
 stringData:
   license-key: <your New Relic license key, base64 encoded>
-  
+
 ---
 apiVersion: v1
 kind: ConfigMap
